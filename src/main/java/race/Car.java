@@ -6,6 +6,7 @@ public class Car implements IDrive {
     private int speed;
     private int fuel = 10;
     private boolean damaged = false;
+    private int result;
 
     public Car(int number, int speed) {
         this.number = number;
@@ -25,7 +26,7 @@ public class Car implements IDrive {
     }
 
     public void useFuel(int fuel) {
-        if(this.fuel >= fuel) {
+        if (this.fuel >= fuel) {
             this.fuel -= fuel;
         }
     }
@@ -36,5 +37,19 @@ public class Car implements IDrive {
 
     public void setDamaged(boolean damaged) {
         this.damaged = damaged;
+    }
+
+    public void drive(int skill) {
+        int randomInt = (int) (4.0 * Math.random());
+        result = randomInt * skill * speed;
+        randomInt = (int) (5.0 * Math.random());
+        if (randomInt >= skill) {
+            damaged = true;
+            result -= 25;
+        }
+    }
+
+    public int getResult() {
+        return result;
     }
 }

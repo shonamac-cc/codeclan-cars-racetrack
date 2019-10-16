@@ -27,4 +27,8 @@ public class Driver {
     public void setRide(IDrive ride) {
         this.ride = ride;
     }
+
+    public void driveRide(){
+        ride.drive(skill);
+    }
 }

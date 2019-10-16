@@ -47,4 +47,15 @@ public class CarTest {
         car.setDamaged(true);
         assertTrue(car.isDamaged());
     }
+
+    @Test
+    public void drive() {
+        car.drive(4);
+        assertEquals(false, (car.getResult() == 0));
+    }
+
+    @Test
+    public void getResult() {
+        assertEquals(0,0);
+    }
 }
