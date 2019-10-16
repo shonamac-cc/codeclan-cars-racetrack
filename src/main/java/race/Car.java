@@ -1,6 +1,6 @@
 package race;
 
-public class Car {
+public class Car implements IDrive {
 
     private int number;
     private int speed;
